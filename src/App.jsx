@@ -6,6 +6,8 @@ import Work from './Pages/Work'
 import Header from './Components/Header'
 import Home from './Pages/Home'
 import Eye from './Components/Eye'
+import Components from './Pages/Components'
+import Socials from './Pages/Socials'
 function App() {
 
   return (
@@ -15,6 +17,8 @@ function App() {
         <Route path='/' element={<Home/>}/>
         <Route path='/about' element={<About />} />
         <Route path='/services' element={<Services />} />
+        <Route path='/components' element={<Components/>}/>
+        <Route path='/socials' element={<Socials/>}/>
         <Route path='/work' element={<Work />} />
       </Routes>
      

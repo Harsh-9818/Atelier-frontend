@@ -1,4 +1,5 @@
 import Eye from '../Components/Eye';
+import Footer from '../Components/Footer';
 import Grid from '../Components/Grid';
 import Marque from '../Components/Marque';
 import '/src/index.css';
@@ -39,6 +40,7 @@ function Home() {
       <div>
         <Marque/>
       </div>
+      <Footer/>
 
     </div>
   );
