@@ -23,7 +23,8 @@ function Header() {
 
   return (
     <div className="bg-gray-900 text-lg text-white h-16 w-full py-4 px-4 md:px-24 flex items-center justify-between sticky top-0 z-10">
-      <Link to="/" className="font-bold text-2xl">
+      <Link to="/" className="font-bold text-2xl flex items-center gap-1">
+        <img src="/Logo/Atelier_logo.png" className="h-9" alt="Company logo" />
         Atelier
       </Link>
 
@@ -46,8 +47,8 @@ function Header() {
       </div>
 
       {/* Right-aligned Button (Hidden on smaller screens) */}
-      <div className="hidden md:flex bg-cyan-300 h-9 w-32 rounded-3xl items-center justify-center flex-shrink-0">
-        <Link to="work" className="font-bold text-black text-xs">
+      <div className="hidden md:flex border border-cyan-300 h-9 w-32 rounded-3xl items-center justify-center flex-shrink-0">
+        <Link to="work" className="font-bold text-white text-xs">
           WORK WITH US
         </Link>
       </div>
