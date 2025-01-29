@@ -5,9 +5,9 @@ import Services from './Pages/Services'
 import Work from './Pages/Work'
 import Header from './Components/Header'
 import Home from './Pages/Home'
-import Eye from './Components/Eye'
 import Components from './Pages/Components'
-import Socials from './Pages/Socials'
+import Socials from './Pages/Socials' 
+
 function App() {
 
   return (

@@ -74,14 +74,14 @@ function Header() {
             Our Services
           </Link>
           <Link
-            to="work"
+            to="components"
             className="px-4 py-2 hover:bg-gray-700 text-cyan-300"
             onClick={() => setIsMenuOpen(false)}
           >
             Components
           </Link>
           <Link
-            to="work"
+            to="socials"
             className="px-4 py-2 hover:bg-gray-700 text-cyan-300"
             onClick={() => setIsMenuOpen(false)}
           >
