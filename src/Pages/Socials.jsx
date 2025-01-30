@@ -5,8 +5,8 @@ function SocialCard({ name, Icon, link }) {
     return (
         <div className="text-center">
             <a href={link} target="_blank" rel="noopener noreferrer">
-                <div className="w-80 h-96 border border-white rounded-3xl flex items-center justify-center hover:border-cyan-300 hover:shadow-lg hover:shadow-cyan-300 hover:scale-105 transition-all">
-                    <Icon className="w-32 h-32 text-gray-400 hover:text-white transition-all" />
+                <div className="w-80 h-96 border border-white rounded-3xl flex items-center justify-center hover:border-cyan-300 hover:shadow-md hover:shadow-cyan-300 hover:scale-105 transition-all">
+                    <Icon className="w-32 h-32 text-gray-400 hover:text-white transition-all group-hover:text-white" />
                 </div>
             </a>
         </div>
@@ -24,7 +24,7 @@ function Socials() {
         <div className="bg-gradient-to-b from-black via-gray-900 to-black text-white w-full min-h-screen">
             <div className="flex justify-center items-center px-6 pt-20">
                 <h1 className="font-semibold uppercase text-sky-200 text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-4xl">
-                    Don't Forget To Follow Us For Latest Updates
+                    follow us on...
                 </h1>
             </div>
             
