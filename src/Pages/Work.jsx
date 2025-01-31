@@ -55,63 +55,76 @@ function Work() {
     return (
         <div className="bg-gradient-to-b from-black via-gray-900 to-black text-white w-full min-h-screen">
             {/* Tag line */}
-            <div className="text-center font-sans px-4 pt-20">
-                <h1 className="font-semibold uppercase text-sky-200 text-2xl sm:text-3xl md:text-4xl">
-                    Wanna work with us?
+            <div className="text-center font-sans px-4 pt-10">
+                <h1 className="font-semibold uppercase text-sky-200 text-2xl sm:text-3xl md:text-3xl">
+                    Connect with us
                 </h1>
             </div>
 
             {/* Form section */}
-            <div className="w-full max-w-2xl border border-white flex flex-col items-center mx-auto mt-10 rounded-3xl p-6 py-10">
-                <h3 className="text-xl pt-4">Welcome to Atelier</h3>
-                <p className="text-gray-300 pt-2">Fill out this details form so we can connect with you.</p>
+            <div className="w-min max-w-2xl border border-slate-700 flex flex-col items-center mx-auto mt-10 rounded-2xl p-6 py-4 mb-24">
+                <h3 className="text-lg pt-2">Welcome to Atelier</h3>
+                <p className="text-gray-400 text-sm pt-2">Fill out this details form so we can connect with you.</p>
 
                 <form 
                     onSubmit={submitHandler} 
-                    className="w-full flex flex-col items-center mt-8"
+                    className="w-96 flex flex-col items-center mt-8"
                 >
-                    <div className="w-full">
+                    <div className="w-96">
                         <div className="flex sm:flex-col lg:flex-row gap-10 sm:gap-4 w-full justify-center mb-6">
-                            <input
-                                value={firstname}
-                                onChange={(e) => setFirstname(e.target.value)}
-                                placeholder="First Name"
-                                className="bg-transparent text-sm border-b border-gray-500 pb-2 w-full outline-none"
-                            />
-                            <input
-                                value={lastname}
-                                onChange={(e) => setLastname(e.target.value)}
-                                placeholder="Last Name"
-                                className="bg-transparent text-sm border-b border-gray-500 pb-2 w-full outline-none"
-                            />
+                            <div>
+                                <label className="text-sm">First Name</label>
+                                <input
+                                    value={firstname}
+                                    onChange={(e) => setFirstname(e.target.value)}
+                                    placeholder="Harry"
+                                    className="bg-slate-800 text-sm p-2 w-full outline-none rounded"
+                                />
+                            </div>
+                            <div>
+                                <label className="text-sm">Last Name</label>
+                                <input
+                                    value={lastname}
+                                    onChange={(e) => setLastname(e.target.value)}
+                                    placeholder="Potter"
+                                    className="bg-slate-800 text-sm p-2 w-full outline-none rounded"
+                                />
+                            </div>
                         </div>
 
                         {/* Email */}
-                        <div className="flex w-full justify-center mb-6">
+                        <div className="flex w-full flex-col justify-center mb-6">
+                            <label className="text-sm">Email Address</label>
                             <input
                                 type="email"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
-                                placeholder="Email Address"
-                                className="bg-transparent text-sm border-b border-gray-500 pb-2 w-full outline-none"
+                                placeholder="atelier.dev2@gmail.com"
+                                className="bg-slate-800 text-sm p-2 w-full outline-none rounded"
                             />
                         </div>
 
                         {/* Country and Phone - Responsive layout */}
                         <div className="flex sm:flex-col lg:flex-row gap-10 sm:gap-4 w-full justify-center mb-6">
-                            <input
-                                value={country}
-                                onChange={(e) => setCountry(e.target.value)}
-                                placeholder="Country"
-                                className="bg-transparent text-sm border-b border-gray-500 pb-2 w-full outline-none"
-                            />
-                            <input
-                                type="tel"
-                                value={phone}
-                                onChange={(e) => setPhone(e.target.value)}
-                                placeholder="Phone"
-                                className="bg-transparent text-sm border-b border-gray-500 pb-2 w-full outline-none"
-                            />
+                            <div>
+                                <label className="text-sm">Country</label>
+                                <input
+                                    value={country}
+                                    onChange={(e) => setCountry(e.target.value)}
+                                    placeholder="Country"
+                                    className="bg-slate-800 text-sm p-2 w-full outline-none rounded"
+                                />
+                            </div>
+                            <div>
+                                <label className="text-sm">Phone No.</label>
+                                <input
+                                    type="tel"
+                                    value={phone}
+                                    onChange={(e) => setPhone(e.target.value)}
+                                    placeholder="+91 000000000"
+                                    className="bg-slate-800 text-sm p-2 w-full outline-none rounded"
+                                />
+                            </div>
                         </div>
 
                         {/* Message */}
@@ -128,7 +141,7 @@ function Work() {
                         <div className="mt-8">
                             <button 
                                 type="submit" 
-                                className="font-bold text-white border border-cyan-300 text-md h-12 w-40 rounded-full flex items-center justify-center hover:bg-cyan-300 hover:text-black transition duration-300"
+                                className="font-bold text-white border border-cyan-300 text-md h-12 w-40 rounded-full flex items-center justify-center"
                                 onClick={handlesubmit}
                             >
                                 Submit
@@ -137,6 +150,7 @@ function Work() {
                     </div>
                 </form>
             </div>
+            <Footer/>
         </div>
     );
 }

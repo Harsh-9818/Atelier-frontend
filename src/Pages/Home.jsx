@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Eye from '../Components/Eye';
 import Footer from '../Components/Footer';
 import Grid from '../Components/Grid';
@@ -32,9 +33,9 @@ function Home() {
 
       {/* Button */}
       <div className=" flex items-center justify-center">
-        <button className="font-bold text-white border border-cyan-300 text-md h-12 w-40 rounded-full flex items-center justify-center">
-          GET IN TOUCH
-        </button>
+        <Link to="/work" className="font-bold text-white border border-cyan-300 text-md h-12 w-40 rounded-full flex items-center justify-center" >
+        GET IN TOUCH
+        </Link>
       </div>
       
       <div>

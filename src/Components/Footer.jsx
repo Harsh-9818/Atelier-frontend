@@ -1,67 +1,65 @@
 import { Link } from 'react-router-dom';
-import { FaGithub, FaInstagram } from "react-icons/fa";
-
 
 function Footer() {
     return (
-        <div className="w-full border-t border-gray-200 mt-10 flex flex-col lg:flex-row justify-center lg:justify-between items-center lg:items-start p-5 pt-10 lg:h-80">
-            {/* Contact Section */}
-            <div className="flex flex-col gap-5 my-4 lg:my-0 lg:mx-10 text-center lg:text-left">
-                <Link to="/" className="font-semibold text-2xl text-white flex gap-2">
-                    <img src="/Logo/Atelier_logo.png" className="h-9" alt="Company logo" />
-                    ATELIER
-                </Link>
-                <div className="flex flex-col gap-2">
-                    <p>Project Enquiries</p>
-                    <Link 
-                        to="https://mail.google.com/" 
-                        target="_blank" 
-                        rel="noopener noreferrer" 
-                        className="text-gray-500"
-                    >
-                        Atelier.dev2@gmail.com
+        <div className="w-full border-t border-gray-200 mt-10 lg:h-80 flex justify-center">
+            <div className="w-full max-w-screen-xl flex flex-col lg:flex-row justify-between items-center lg:items-start px-5 py-10">
+                
+                {/* Logo Section */}
+                <div className="lg:ml-10 mb-6 lg:mb-0">
+                    <Link to="/" className="font-semibold text-2xl text-white flex gap-2">
+                        <img src="/Logo/Atelier_logo.png" className="h-9" alt="Company logo" />
+                        ATELIER
                     </Link>
                 </div>
-                <div className="flex flex-col gap-2">
-                    <p>Contact</p>
-                    <p className="text-gray-500">+91 0000000000</p>
-                </div>
-            </div>
 
-            {/* Social Section */}
-            <div className="flex flex-col gap-5 my-4 lg:my-0 items-center lg:mx-10">
-                <div>
-                   
-                    <p className="font-semibold text-xl text-center lg:text-left">Follow us on</p>
-                </div>
-                <div className="flex gap-6">
-                    <a
-                        href="https://github.com/Harsh-9818"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-gray-400 text-3xl hover:text-white"
-                    >
-                        <FaGithub />
-                    </a>
+                {/* Right side: Contact, Social, and Links in 3 separate columns */}
+                <div className="flex flex-col lg:flex-row justify-between lg:gap-20 text-center lg:text-left lg:mr-10">
+                    
+                    {/* Contact Section */}
+                    <div className="flex flex-col gap-2">
+                        {/* <p className="font-semibold text-xl">Project Enquiries</p> */}
+                        <a 
+                            href="mailto:Atelier.dev2@gmail.com" 
+                            className="text-gray-500 hover:text-white"
+                        >
+                            atelier.dev2@gmail.com
+                        </a>
+                        {/* <p className="font-semibold text-xl mt-3">Contact</p> */}
+                        <p className="text-gray-500 pt-4">+91 0000000000</p>
+                    </div>
 
-                    <a
-                        href="https://www.instagram.com/atelier_official_/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-gray-400 text-3xl hover:text-white"
-                    >
-                        <FaInstagram />
-                    </a>
-                </div>
-            </div>
+                    {/* Social Section */}
+                    <div className="flex flex-col gap-2">
+                        {/* <p className="font-semibold text-xl">Follow us on</p> */}
+                        <a 
+                            href="https://github.com/Harsh-9818" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="text-gray-500 hover:text-white"
+                        >
+                            GitHub
+                        </a>
+                        <a 
+                            href="https://www.instagram.com/atelier_official_/" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="text-gray-500 hover:text-white pt-4"
+                        >
+                            Instagram
+                        </a>
+                    </div>
 
-            {/* Links Section */}
-            <div className="flex flex-col gap-5 my-4 lg:my-0 text-center lg:text-right lg:mx-10 text-gray-500">
-                <Link to="about" className='hover:text-white'>About</Link>
-                <Link to="services" className='hover:text-white'>Our Services</Link>
-                <Link to="components" className='hover:text-white'>Components</Link>
-                <Link to="socials" className='hover:text-white'>Socials</Link>
-                <Link to="work" className='hover:text-white'>Work with us</Link>
+                    {/* Links Section */}
+                    <div className="flex flex-col gap-5 text-gray-500">
+                        <Link to="about" className="hover:text-white">About</Link>
+                        <Link to="services" className="hover:text-white">Our Services</Link>
+                        <Link to="components" className="hover:text-white">Components</Link>
+                        <Link to="socials" className="hover:text-white">Socials</Link>
+                        <Link to="work" className="hover:text-white">Work with us</Link>
+                    </div>
+
+                </div>
             </div>
         </div>
     );
