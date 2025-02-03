@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 function Footer() {
     return (
         <div className="w-full border-t border-gray-200 mt-10 lg:h-80 flex justify-center">
-            <div className="w-full max-w-screen-xl flex flex-col lg:flex-row justify-between items-center lg:items-start px-5 py-10">
+            <div className="w-full max-w-screen-xl flex flex-col lg:flex-row justify-between items-center lg:items-start py-10">
                 
                 {/* Logo Section */}
-                <div className="lg:ml-10 mb-6 lg:mb-0">
+                <div className="lg:ml-2 mb-6 lg:mb-0">
                     <Link to="/" className="font-semibold text-2xl text-white flex gap-2">
                         <img src="/Logo/Atelier_logo.png" className="h-9" alt="Company logo" />
                         ATELIER
@@ -14,7 +14,7 @@ function Footer() {
                 </div>
 
                 {/* Right side: Contact, Social, and Links in 3 separate columns */}
-                <div className="flex flex-col lg:flex-row justify-between lg:gap-20 text-center lg:text-left lg:mr-10">
+                <div className="flex flex-col lg:flex-row justify-between lg:gap-20 text-center lg:text-left lg:mr-4">
                     
                     {/* Contact Section */}
                     <div className="flex flex-col gap-2">
