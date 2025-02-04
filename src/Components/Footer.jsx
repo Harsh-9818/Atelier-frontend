@@ -52,11 +52,11 @@ function Footer() {
 
                     {/* Links Section */}
                     <div className="flex flex-col gap-5 text-gray-500">
-                        <Link to="about" className="hover:text-white">About</Link>
-                        <Link to="services" className="hover:text-white">Our Services</Link>
-                        <Link to="components" className="hover:text-white">Components</Link>
-                        <Link to="socials" className="hover:text-white">Socials</Link>
-                        <Link to="work" className="hover:text-white">Work with us</Link>
+                        <Link to="/about" className="hover:text-white">About</Link>
+                        <Link to="/services" className="hover:text-white">Our Services</Link>
+                        <Link to="/components" className="hover:text-white">Components</Link>
+                        <Link to="/socials" className="hover:text-white">Socials</Link>
+                        <Link to="/work" className="hover:text-white">Work with us</Link>
                     </div>
 
                 </div>

@@ -78,7 +78,7 @@ function Work() {
                                     value={firstname}
                                     onChange={(e) => setFirstname(e.target.value)}
                                     placeholder="Harry"
-                                    className="bg-slate-800 text-sm p-2 w-full outline-none rounded"
+                                    className="bg-slate-800 text-sm p-2 w-full outline-none rounded "
                                 />
                             </div>
                             <div>

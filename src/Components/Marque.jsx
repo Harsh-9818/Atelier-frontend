@@ -20,7 +20,7 @@ function Marque() {
               <Image key={index} src={el} />
             ))}
           </MarqueeGroup>
-          <MarqueeGroup>
+          <MarqueeGroup >
             {row1.map((el, index) => (
               <Image key={index} src={el} />
             ))}
@@ -97,6 +97,10 @@ const common = css`
 
 const MarqueeGroup = styled.div`
   ${common}
+    @media (max-width: 768px) {
+    &:nth-child(2) {
+      display: none;
+    }
 `;
 
 const Image = styled.img`
@@ -112,3 +116,4 @@ const Image = styled.img`
     width: clamp(8rem, 12vmin, 15rem); /* Scaled for smaller screens */
   }
 `;
+

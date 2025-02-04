@@ -29,7 +29,7 @@ function Services() {
 
     return (
         <div className="bg-gradient-to-b from-black via-gray-900 to-black text-white w-full min-h-screen">
-            <div className="font-sans px-4 pt-20 mb-32 gap-10 mx-4 md:mx-20 flex flex-col md:flex-row items-stretch">
+            <div className="font-sans flex-wrap px-4 pt-20 mb-32 gap-10 mx-4 md:mx-20 flex flex-col md:flex-row items-stretch">
 
                 {/* Basic */}
                 <div className="w-full md:w-full h-auto flex-1 border border-slate-500 rounded-3xl flex flex-col hover:shadow-cyan-inner hover:scale-105 hover:border-2 hover:border-cyan-300 transition-all">
