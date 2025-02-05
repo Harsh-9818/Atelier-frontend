@@ -1,28 +1,29 @@
 import React from "react";
 import styled, { keyframes, css } from "styled-components";
+import { FaAws, FaDocker, FaNodeJs, FaReact } from "react-icons/fa";
+import { TbBrandFramerMotion } from "react-icons/tb";
+import { SiMongodb, SiMysql } from "react-icons/si";
+import { RiNextjsFill } from "react-icons/ri";
 
 function Marque() {
-  const row1 = [
-    "https://cdn.freelogovectors.net/wp-content/uploads/2023/02/react-logo-freelogovectors.net_.png",
-    "https://www.freepnglogos.com/uploads/javascript-png/logo-html5-js-css3-png-transparent-logo-4.png",
-    "./src/assets/MarqueImage/Docker.png",
-    "./src/assets/MarqueImage/Expres.png",
-    "./src/assets/MarqueImage/Aws.png",
-    "https://1000logos.net/wp-content/uploads/2020/08/MySQL-Logo.png",
-  ];
+  const row1 = [FaDocker, FaReact, FaAws, FaNodeJs, TbBrandFramerMotion, SiMysql];
 
   return (
     <AppContainer>
       <Wrapper>
         <Marquee>
           <MarqueeGroup>
-            {row1.map((el, index) => (
-              <Image key={index} src={el} />
+            {row1.map((Icon, index) => (
+              <IconWrapper key={index}>
+                <Icon size={70} color="gray"/>
+              </IconWrapper>
             ))}
           </MarqueeGroup>
-          <MarqueeGroup >
-            {row1.map((el, index) => (
-              <Image key={index} src={el} />
+          <MarqueeGroup>
+            {row1.map((Icon, index) => (
+              <IconWrapper key={index}>
+                <Icon size={70} color="gray" />
+              </IconWrapper>
             ))}
           </MarqueeGroup>
         </Marquee>
@@ -76,6 +77,7 @@ const Marquee = styled.div`
   }
 `;
 
+/* Faster speed for small screens */
 const scrollX = keyframes`
   from {
     transform: translateX(0);
@@ -85,6 +87,7 @@ const scrollX = keyframes`
   }
 `;
 
+/* Common styles for smooth scrolling */
 const common = css`
   flex-shrink: 0;
   display: flex;
@@ -92,28 +95,29 @@ const common = css`
   justify-content: space-around;
   white-space: nowrap;
   width: 100%;
-  animation: ${scrollX} 10s linear infinite;
+  animation: ${scrollX} 7s linear infinite;
+
+  @media (max-width: 768px) {
+    animation-duration: 3s; /* Faster scrolling on small screens */
+    gap: 40px; /* Increased gap */
+  }
 `;
 
 const MarqueeGroup = styled.div`
   ${common}
-    @media (max-width: 768px) {
+
+  @media (max-width: 768px) {
     &:nth-child(2) {
       display: none;
     }
-`;
-
-const Image = styled.img`
-  object-fit: contain;
-  width: clamp(10rem, 15vmin, 20rem); /* Original size retained */
-  height: auto;
-  border-radius: 0.5rem;
-  aspect-ratio: 16/9;
-  padding: 5px;
-
-
-  @media (max-width: 768px) {
-    width: clamp(8rem, 12vmin, 15rem); /* Scaled for smaller screens */
   }
 `;
 
+const IconWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px; /* Adjust size */
+  height: 80px;
+  margin: 10px;
+`;
