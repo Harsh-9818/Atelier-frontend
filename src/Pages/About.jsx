@@ -3,8 +3,8 @@ import Footer from "../Components/Footer";
 
 function About() {
   return (
-    <div className="bg-gradient-to-b from-black via-gray-900 to-black text-white w-full min-h-screen overflow-hidden">
-      <div className="font-sans px-4 pt-32 flex flex-col md:flex-row justify-between items-center md:mb-60">
+    <div className="bg-[#0e0e0e] text-white w-full min-h-screen overflow-hidden">
+      <div className="font-sans px-4 lg:pt-32 pt-20 mb-12 flex flex-col md:flex-row justify-between items-center md:mb-60 ">
         {/* Left Section (Text) */}
         <div className="w-full md:w-1/2 mx-4 md:mx-20 text-center md:text-left">
           <h1 className="tracking-[0.5rem] text-cyan-300">ABOUT US</h1>
@@ -20,7 +20,7 @@ function About() {
           <div className="mt-6 md:mt-10">
             <Link
               to="/work"
-              className="font-bold text-white border border-cyan-300 text-md h-12 w-40 rounded-full flex items-center justify-center mx-auto md:mx-0"
+              className="font-bold text-white glow-on-hover text-md h-12 w-40 rounded-full flex items-center justify-center mx-auto md:mx-0"
             >
               GET IN TOUCH
             </Link>

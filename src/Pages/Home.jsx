@@ -4,18 +4,20 @@ import Footer from '../Components/Footer';
 import Grid from '../Components/Grid';
 import Marque from '../Components/Marque';
 import '/src/index.css';
+// import {motion} from 'motion';
 
 function Home() {
   return (
-    <div className="bg-gradient-to-b from-black via-gray-900 to-black text-white w-full min-h-screen">
+    <div>
+    <div className="aurora-background text-white w-full min-h-screen ">
       
-      {/* Grid Component
-      <div className="absolute top-0 left-0 p-4">
+      {/* Grid Component */}
+      {/* <div className="absolute top-0 left-0 p-4">
         <Grid />
       </div> */}
 
       {/* Header Section */}
-      <div className="text-center font-sans px-4 pt-20">
+      <div className="text-center font-sans px-4 lg:pt-20">
         <h1 className="font-bold text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
           Your Vision, Our Expertise
         </h1>
@@ -32,8 +34,8 @@ function Home() {
       </div>
 
       {/* Button */}
-      <div className=" flex items-center justify-center">
-        <Link to="/work" className="font-bold text-white border border-cyan-300 text-md h-12 w-40 rounded-full flex items-center justify-center" >
+      <div className=" flex items-center justify-center ">
+        <Link to="/work" className=" glow-on-hover font-bold text-white text-md h-12 w-40 rounded-full flex items-center justify-center" >
         GET IN TOUCH
         </Link>
       </div>
@@ -41,8 +43,8 @@ function Home() {
       <div>
         <Marque/>
       </div>
-      <Footer/>
-
+    </div>
+    <Footer/>
     </div>
   );
 }

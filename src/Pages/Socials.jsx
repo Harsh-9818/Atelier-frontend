@@ -22,7 +22,7 @@ function Socials() {
     ];
     
     return (
-        <div className="bg-gradient-to-b from-black via-gray-900 to-black text-white w-full min-h-screen">
+        <div className="bg-[#0e0e0e] text-white w-full min-h-screen">
             <div className="flex justify-center items-center px-6 pt-20">
                 <h1 className="font-semibold mb-10 text-cyan-200 text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-4xl">
                     Follow us on...

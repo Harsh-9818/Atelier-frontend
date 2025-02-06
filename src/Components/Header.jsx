@@ -18,7 +18,7 @@ function Header() {
   }, []);
 
   return (
-    <div className="bg-gray-900 text-lg text-white h-16 w-full py-4 px-4 md:px-24 flex items-center justify-between sticky top-0 z-20">
+    <div className="bg-black text-lg text-white h-16 w-full py-4 px-4 md:px-24 flex items-center justify-between sticky top-0 z-20">
       {/* Logo */}
       <Link to="/" className="font-bold text-2xl flex items-center gap-1">
         <img src="/Logo/Atelier_logo.png" className="h-9" alt="Company logo" />
@@ -29,15 +29,15 @@ function Header() {
       <div className="hidden md:flex flex-1 justify-left pl-20 text-gray-400 gap-10 text-sm font-base">
         <Link to="about">About</Link>
         <Link to="services">Our Services</Link>
-        <Link to="socials">Socials</Link>
+        {/* <Link to="socials">Socials</Link> */}
       </div>
 
       {/* Right-aligned Button (Hidden on small screens) */}
-      <div className="hidden md:flex border border-cyan-300 h-9 w-32 rounded-3xl items-center justify-center flex-shrink-0">
-        <Link to="work" className="font-bold text-white text-xs">
-          WORK WITH US
+      {/* <div className="hidden md:flex glow-on-hover items-center justify-center flex-shrink-0">
+        <Link to="work" className="font-bold text-white text-xs uppercase">
+          Get in touch
         </Link>
-      </div>
+      </div> */}
 
       {/* Hamburger Menu Icon */}
       <div
@@ -69,9 +69,9 @@ function Header() {
           <Link to="services" onClick={() => setIsMenuOpen(false)}>
             Our Services
           </Link>
-          <Link to="socials" onClick={() => setIsMenuOpen(false)}>
+          {/* <Link to="socials" onClick={() => setIsMenuOpen(false)}>
             Socials
-          </Link>
+          </Link> */}
           <Link to="work" onClick={() => setIsMenuOpen(false)}>
             Get in Touch
           </Link>

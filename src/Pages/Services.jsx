@@ -28,7 +28,7 @@ function Services() {
     ];
 
     return (
-        <div className="bg-gradient-to-b from-black via-gray-900 to-black text-white w-full min-h-screen">
+        <div className="bg-[#0e0e0e]  text-white w-full min-h-screen">
             <div className="font-sans flex-wrap px-4 pt-20 mb-32 gap-10 mx-4 md:mx-20 flex flex-col md:flex-row items-stretch">
 
                 {/* Basic */}
@@ -52,7 +52,7 @@ function Services() {
                     <div className="my-5 flex justify-center mt-auto">
                         <Link
                             to="/work"
-                            className="font-bold text-white border border-cyan-300 text-md h-12 w-40 rounded-full flex items-center justify-center mb-5"
+                            className="font-bold text-white glow-on-hover text-md h-12 w-40 rounded-full flex items-center justify-center mb-5"
                         >
                             Get Quotation
                         </Link>
@@ -80,7 +80,7 @@ function Services() {
                     <div className="my-5 flex justify-center mt-auto">
                         <Link
                             to="/work"
-                            className="font-bold text-white border border-cyan-300 text-md h-12 w-40 rounded-full flex items-center justify-center mb-5"
+                            className="font-bold text-white glow-on-hover text-md h-12 w-40 rounded-full flex items-center justify-center mb-5"
                         >
                             Get Quotation
                         </Link>
@@ -108,7 +108,7 @@ function Services() {
                     <div className="my-5 flex justify-center mt-auto">
                         <Link
                             to="/work"
-                            className="font-bold text-white border border-cyan-300 text-md h-12 w-40 rounded-full flex items-center justify-center mb-5"
+                            className="font-bold text-white glow-on-hover text-md h-12 w-40 rounded-full flex items-center justify-center mb-5"
                         >
                             Get Quotation
                         </Link>

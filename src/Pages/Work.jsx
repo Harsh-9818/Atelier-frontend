@@ -53,16 +53,16 @@ function Work() {
     }
     
     return (
-        <div className="bg-gradient-to-b from-black via-gray-900 to-black text-white w-full min-h-screen">
+        <div className="bg-[#0e0e0e]  text-white w-full min-h-screen">
             {/* Tag line */}
             <div className="text-center font-sans px-4 pt-10">
-                <h1 className="font-semibold uppercase text-sky-200 text-2xl sm:text-3xl md:text-3xl">
+                <h1 className="font-semibold  text-sky-200 text-2xl sm:text-3xl md:text-3xl">
                     Connect with us
                 </h1>
             </div>
 
             {/* Form section */}
-            <div className="w-min max-w-2xl border border-slate-700 flex flex-col items-center mx-auto mt-10 rounded-2xl p-6 py-4 mb-24">
+            <div className="w-min max-w-2xl lg:border lg:border-slate-700 md:border md:border-slate-700 flex flex-col items-center mx-auto lg:mt-10 mt-5 rounded-2xl p-6 py-4 mb-24">
                 <h3 className="text-lg pt-2">Welcome to Atelier</h3>
                 <p className="text-gray-400 text-sm pt-2">Fill out this details form so we can connect with you.</p>
 
@@ -71,7 +71,7 @@ function Work() {
                     className="w-96 flex flex-col items-center mt-8"
                 >
                     <div className="w-96">
-                        <div className="flex sm:flex-col lg:flex-row gap-10 sm:gap-4 w-full justify-center mb-6">
+                        <div className="flex flex-col lg:flex-row gap-10 sm:gap-4 w-full justify-center mb-6">
                             <div>
                                 <label className="text-sm">First Name</label>
                                 <input
@@ -105,7 +105,7 @@ function Work() {
                         </div>
 
                         {/* Country and Phone - Responsive layout */}
-                        <div className="flex sm:flex-col lg:flex-row gap-10 sm:gap-4 w-full justify-center mb-6">
+                        <div className="flex flex-col lg:flex-row gap-10 sm:gap-4 w-full justify-center mb-6">
                             <div>
                                 <label className="text-sm">Country</label>
                                 <input
@@ -141,10 +141,10 @@ function Work() {
                         <div className="mt-8">
                             <button 
                                 type="submit" 
-                                className="font-bold text-white border border-cyan-300 text-md h-12 w-40 rounded-full flex items-center justify-center"
+                                className="font-bold text-white mb-4 glow-on-hover text-md flex items-center justify-center"
                                 onClick={handlesubmit}
                             >
-                                Submit
+                                Submit Form
                             </button>
                         </div>
                     </div>
