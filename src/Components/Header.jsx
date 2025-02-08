@@ -29,6 +29,7 @@ function Header() {
       <div className="hidden md:flex flex-1 justify-left pl-20 text-gray-400 gap-10 text-sm font-base">
         <Link to="about">About</Link>
         <Link to="services">Our Services</Link>
+
         {/* <Link to="socials">Socials</Link> */}
       </div>
 

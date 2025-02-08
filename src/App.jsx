@@ -8,6 +8,7 @@ import Home from './Pages/Home'
 import Components from './Pages/Components'
 import Socials from './Pages/Socials' 
 
+
 function App() {
 
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path='/components' element={<Components/>}/>
         <Route path='/socials' element={<Socials/>}/>
         <Route path='/work' element={<Work />} />
+        <Route path="/" element={<Components />} />
       </Routes>
      
     </div>

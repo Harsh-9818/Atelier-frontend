@@ -20,23 +20,44 @@ export default function Grid() {
     let progress = 0
     let lastProgress = 0
 
-    // Modify the points to start from the upper half of the canvas
     const points = [
-      { x: 9, y: 5 },   // Start from the upper portion
-      { x: 7, y: 5 },
-      { x: 7, y: 4.5 },
-      { x: 5, y: 4.5 },
-      { x: 5, y: 4 },
-      { x: 3, y: 4 },
-      { x: 3, y: 3 },
+      { x: 9, y: 9 },
+      { x: 7, y: 9 },
+      { x: 7, y: 7.5 },
+      { x: 5, y: 7.5 },
+      { x: 5, y: 6 },
+      { x: 3, y: 6 },
+      { x: 3, y: 4.5 },
+      { x: 1, y: 4.5 },
       { x: 1, y: 3 },
-      { x: 1, y: 2 },
-      { x: 0, y: 2 },
+      { x: 0, y: 3 },
     ]
+
+    // Draw grid with transparent lines
+    const drawGrid = () => {
+      ctx.strokeStyle = "rgba(255, 255, 255, 0)"  // Fully transparent grid lines
+      ctx.lineWidth = 1
+
+      for (let i = 0; i <= gridSize; i++) {
+        const pos = i * cellSize
+
+        // Vertical lines
+        ctx.beginPath()
+        ctx.moveTo(pos, 0)
+        ctx.lineTo(pos, height)
+        ctx.stroke()
+
+        // Horizontal lines
+        ctx.beginPath()
+        ctx.moveTo(0, pos)
+        ctx.lineTo(width, pos)
+        ctx.stroke()
+      }
+    }
 
     const drawZigzag = (start, end) => {
       ctx.beginPath()
-      ctx.strokeStyle = "#00FFFF"
+      ctx.strokeStyle = "#00ffff"
       ctx.lineWidth = 1
 
       for (let i = Math.floor(start); i < Math.min(points.length - 1, Math.ceil(end)); i++) {
@@ -67,8 +88,9 @@ export default function Grid() {
 
     const animate = () => {
       ctx.clearRect(0, 0, width, height)
+      drawGrid()
 
-      progress += 0.05 // Medium speed animation
+      progress += 0.03 // Medium speed animation
       if (progress > points.length - 1) {
         progress = 0
         lastProgress = 0
@@ -91,8 +113,8 @@ export default function Grid() {
   }, [])
 
   return (
-    <div className="relative w-full h-40 sm:hidden md:block"> {/* Adjust height to show only the upper half */}
-      <canvas ref={canvasRef} width={320} height={160} className="w-full h-full" /> {/* Reduce the height to half */}
+    <div className="relative w-80 h-80 p-4">
+      <canvas ref={canvasRef} width={320} height={320} className="w-full h-full" />
     </div>
   )
 }

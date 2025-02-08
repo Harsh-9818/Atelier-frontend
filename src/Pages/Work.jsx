@@ -2,6 +2,8 @@ import { useState } from "react";
 import Footer from "../Components/Footer";
 import axios from 'axios'
 const BACKEND_URL = import.meta.env.VITE_BACKEND;
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function Work() {
@@ -40,18 +42,48 @@ function Work() {
     const [phone, setPhone] = useState('');
     const [message, setMessage] = useState('');
 
-    const handlesubmit=async(req,res)=>{
-        try {
-            await axios.post(`${BACKEND_URL}/api/v1/user/form`, {firstname, lastname, email, country, phone, message})
-            console.log({firstname, lastname, email, country, phone, message});
-            
-        } catch (error) {
-            console.log(error);
-            
-        }
-        
+const handlesubmit = async (e) => {
+    e.preventDefault();
+
+    // Basic form validation
+    if (!firstname || !lastname || !email || !country || !phone || !message) {
+        alert("Please fill in all fields.");
+        return;
     }
-    
+
+    // Validate email format
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!emailPattern.test(email)) {
+        alert("Please enter a valid email address.");
+        return;
+    }
+
+    // Validate phone number (simple validation for numbers only)
+    const phonePattern = /^[0-9]+$/;
+    if (!phonePattern.test(phone)) {
+        alert("Please enter a valid phone number.");
+        return;
+    }
+
+    try {
+        await axios.post(`${BACKEND_URL}/api/v1/user/form`, { firstname, lastname, email, country, phone, message });
+
+        // Show alert only when the form is submitted successfully
+        toast.success("Form submitted successfully!", { position: "top-right", autoClose: 3000 });
+
+        // Clear form fields after successful submission
+        setFirstname('');
+        setLastname('');
+        setEmail('');
+        setCountry('');
+        setPhone('');
+        setMessage('');
+    } catch (error) {
+        console.log(error);
+        toast.error("Failed to submit the form. Please try again.");
+    }
+};
+
     return (
         <div className="bg-[#0e0e0e]  text-white w-full min-h-screen">
             {/* Tag line */}
@@ -150,6 +182,7 @@ function Work() {
                     </div>
                 </form>
             </div>
+            <ToastContainer />
             <Footer/>
         </div>
     );
