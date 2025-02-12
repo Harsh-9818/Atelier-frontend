@@ -15,7 +15,7 @@ function Marque() {
           <MarqueeGroup>
             {row1.map((Icon, index) => (
               <IconWrapper key={index}>
-                <Icon size={70} color="gray"/>
+                <Icon size={70} color="gray" />
               </IconWrapper>
             ))}
           </MarqueeGroup>
@@ -74,10 +74,12 @@ const Marquee = styled.div`
 
   @media (max-width: 768px) {
     width: 90%;
+    margin-left: 20px; /* Add margin on small screens */
+    margin-right: 20px;
   }
 `;
 
-/* Faster speed for small screens */
+/* Keyframe animation for continuous horizontal scrolling */
 const scrollX = keyframes`
   from {
     transform: translateX(0);
@@ -95,29 +97,23 @@ const common = css`
   justify-content: space-around;
   white-space: nowrap;
   width: 100%;
-  animation: ${scrollX} 7s linear infinite;
+  animation: ${scrollX} 6s linear infinite;
 
   @media (max-width: 768px) {
-    animation-duration: 3s; /* Faster scrolling on small screens */
-    gap: 40px; /* Increased gap */
+    animation-duration: 6s; /* Adjusted for smoothness */
+    gap: 40px;
   }
 `;
 
 const MarqueeGroup = styled.div`
   ${common}
-
-  @media (max-width: 768px) {
-    &:nth-child(2) {
-      display: none;
-    }
-  }
 `;
 
 const IconWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 80px; /* Adjust size */
+  width: 80px;
   height: 80px;
   margin: 10px;
 `;
